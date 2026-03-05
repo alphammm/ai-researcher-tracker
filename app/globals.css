@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --border: #e2e8f0;
+  --accent: #3b82f6;
+}
+
+.dark {
+  --bg-primary: #0b0f1a;
+  --bg-secondary: #111827;
+  --bg-card: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+  --border: #1e293b;
+  --accent: #60a5fa;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 3px;
+}
+
+/* Tier color accents */
+.tier-red { border-left-color: #ef4444; }
+.tier-orange { border-left-color: #f97316; }
+.tier-yellow { border-left-color: #eab308; }
+.tier-blue { border-left-color: #3b82f6; }
+.tier-purple { border-left-color: #a855f7; }
+
+.tier-red .tier-badge { background: #fef2f2; color: #dc2626; }
+.tier-orange .tier-badge { background: #fff7ed; color: #ea580c; }
+.tier-yellow .tier-badge { background: #fefce8; color: #ca8a04; }
+.tier-blue .tier-badge { background: #eff6ff; color: #2563eb; }
+.tier-purple .tier-badge { background: #faf5ff; color: #9333ea; }
+
+.dark .tier-red .tier-badge { background: #450a0a; color: #fca5a5; }
+.dark .tier-orange .tier-badge { background: #431407; color: #fdba74; }
+.dark .tier-yellow .tier-badge { background: #422006; color: #fde047; }
+.dark .tier-blue .tier-badge { background: #172554; color: #93c5fd; }
+.dark .tier-purple .tier-badge { background: #3b0764; color: #d8b4fe; }
+
+/* Heat indicators */
+.heat-hot { color: #ef4444; }
+.heat-warm { color: #f97316; }
+.heat-emerging { color: #22c55e; }
