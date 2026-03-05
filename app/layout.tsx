@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AI Researcher Startup Tracker",
+  title: "Nancy's AI Researcher Startup Tracker",
   description:
     "Track top AI researchers leaving big labs to start companies. Updated weekly.",
   openGraph: {
-    title: "AI Researcher Startup Tracker",
+    title: "Nancy's AI Researcher Startup Tracker",
     description:
       "Track top AI researchers leaving big labs to start companies. Updated weekly.",
     type: "website",
